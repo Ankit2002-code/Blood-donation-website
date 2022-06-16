@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>REGISTER</title>
+	<style type="text/css">
+		body{
+			margin: 10px;
+			padding: 0px;
+			background-image: url("register.jpg");
+		    background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+		}
+		.form{
+			display:inline-flex;
+			justify-content: center;
+			flex-direction: column;
+			float: center;
+			font-size: 30px;
+			align-content: center;
+			margin-left: 580px;
+			margin-top: 50px;
+		}
+		.form label{
+			padding: 15px;
+		}
+		.form button{
+			background-color: #000;
+			color: #00ffff;
+			font-size: 32px;
+			border-radius: 50%;
+			transition-duration: 0.4s;
+		}
+		.form button :hover{
+			color: #4caf50;
+		}
+		.top h1{
+			font-size: 50px;
+			font-family: sans-serif;
+			text-shadow: rgba(1, 1, 1.5, 1.0);
+			margin-left: 440px;
+			margin-right: 530px;
+			color: #000;
+			text-shadow: #000;
+			text-decoration: underline;
+			font-weight: bolder;
+		}
+		/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  background-color: #000;
+			color: #00ffff;
+			font-size: 32px;
+			border-radius: 50%;
+			transition-duration: 0.4s;
+			margin-left: 300px;
+			border-radius: 16px;
+
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 16px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+
+		
+	</style>
+</head>
+<body>
+	<div class="top">
+		<h1><b>REGISTRATION PAGE</b></h1>
+	</div>
+	<form class="form">
+		<label for="E-mail id">Email:</label>
+                <input name="E-mail id" type="text" placeholder="enter your E-mail id">
+                <label for="password">Password:</label>
+                <input name="password" placeholder="Password" type="password">
+                <label for="Confirm Password">Confirm Password:</label>
+                <input type="password" placeholder="re-enter your password">
+                <label for="mobile no">Mobile No:</label>
+                <input type="tel" placeholder="enter your mobile no">
+                <label for="group">Blood Group:</label>
+                <select name="group" id="group">
+                <option value="A+">A+</option>
+                <option value="B+">B+</option>
+                <option value="AB+">AB+</option>
+                <option value="A-">A-</option>
+                <option value="B-">B-</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                </select><br>
+
+
+                
+                <div class="popup" onclick="myFunction()">Register
+                <span class="popuptext" id="myPopup">You have been successfully registered...!</span>
+                </div>
+                <script>
+// When the user clicks on <div>, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+
+
+</body>
+</html>
